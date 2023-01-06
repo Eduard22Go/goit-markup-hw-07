@@ -1,0 +1,67 @@
+@charset "UTF-8";
+:root {
+  --headers-color: #212121;
+  --secondary-text-color: #757575;
+  --header-link-color: #2196F3;
+  --footer-link-color:rgba(255, 255, 255, 0.6);
+  --white-simbols-color:#FFFFFF;
+  --primery-background-color:#FFFFFF;
+  --secondary-background-color:#F5F4FA;
+  --footer-background-color:#2F303A;
+  --logo-black-color:#000000;
+  --header-border-bottom:#ECECEC;
+  --portfolio-cards-border:#EEEEEE;
+  --background-hero-color:#C4C4C4;
+  --icon-color: #AFB1B8;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: var(--primery-background-color);
+  color: var(--secondary-text-color);
+  font-family: "roboto", "serif", "verdana", "tahoma", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* Убирает маркер в списках  */
+.list,
+.feature-list {
+  list-style: none;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}/*# sourceMappingURL=main.css.map */
