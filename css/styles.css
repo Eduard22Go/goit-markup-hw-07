@@ -115,13 +115,26 @@ img {
     font-size: 26px;
     line-height: 1.19;
 
+    /* display: block;
+    padding-top: 24px;
+    padding-bottom: 25px;
+
+    margin-right: 93px; */
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.logo--header {
     display: block;
     padding-top: 24px;
     padding-bottom: 25px;
 
     margin-right: 93px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+}
+.logo--footer {
+    display: block;
+    padding:0;
+    margin-bottom: 20px;
 }
 
 .logo__label-studio {
@@ -191,6 +204,16 @@ bottom: -1px;
     flex-direction: column;
 }
 
+.address__item {
+    margin: 0px;
+}
+.address__item--header:not(:last-child) {
+    margin-right: 50px;
+}
+.address__item--footer {
+    margin:0px;
+}
+
 .address__link {
     display: flex;
     padding-top: 32px;
@@ -206,6 +229,16 @@ bottom: -1px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.address__link--footer {
+    padding: 0px;
+    margin-bottom: 9px;
+
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.address__link--footer-street {
+    color: var(--primery-background-color)
+}
 .address__link:hover,
 .address__link:focus {
     color: var(--header-link-color);
@@ -215,10 +248,6 @@ bottom: -1px;
 
 .address__icon {
     margin-right: 10px;
-}
-
-.address__item:not(:last-child) {
-    margin-right: 50px;
 }
 
 /* Секція Hero */
@@ -522,7 +551,7 @@ button {
     margin-bottom: 9px;
 }
 
-.address-foot .link {
+.address-footer .link {
     font-weight: 400;
 }
 .link.list-phone {
