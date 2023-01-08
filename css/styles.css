@@ -531,98 +531,44 @@ button {
     color:var(--header-link-color);
 }
 
-.link.list-address {
-    color:var(--white-simbols-color);
-}
-
-.link.list-address:hover,
-.link.list-address:focus {
-    color:var(--header-link-color);
-}
-.link.list-mail {
-    color:var(--footer-link-color);
-}
-.link.list-mail:hover,
-.link.list-mail:focus {
-    color:var(--header-link-color);
-}
-
-.address-footer .item:not(:last-child) {
-    margin-bottom: 9px;
-}
-
-.address-footer .link {
-    font-weight: 400;
-}
-.link.list-phone {
-    color:var(--footer-link-color);
-}
-.link.list-phone:hover,
-.link.list-phone:focus {
-    color:var(--header-link-color);
-}
-
-
-
-  
-.footer-icon {
+/* Соцсети футера */
+.footer-soc {
     margin-left: 70px;
 }
-  
-.footer-title {
+
+.footer-soc__title {
     margin-bottom: 20px;
-  
+
     color: var(--white-simbols-color);
-  
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 700;
     font-size: 14px;
     line-height: 1.4;
     text-transform: uppercase;
 }
-  
-  
-.footer-soc-list {
-    display: flex;
-}
-  
-.footer-soc-item {
-    width: 44px;
-    height: 44px;
-    margin-left: 10px;
-}
-  
-.footer-soc-item:first-child {
-    margin-left: 0;
-}
-  
-.footer-soc-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+
+.soc-link--footer {
     background-color: rgba(255, 255, 255, 0.1);
 }
-  
-.footer-soc-link:hover,
-.footer-soc-link:focus {
-    background-color: var(--header-link-color);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} 
 
-.footer-soc-icon {
+.soc-icon--footer {
     fill: var(--white-simbols-color);
 }
 
 /* Форма подписки в Футере */
 .form-footer {
-    margin-left: 83px;
+    margin-left: 93px;
 }
 
-.form-footer-input {
+.form-footer__title {
+    margin-bottom: 20px;
+
+    color: var(--white-simbols-color);
+    font-size: 14px;
+    line-height: 1.4;
+    
+    text-transform: uppercase;
+}
+
+.form-footer__input {
     display: inline-block;
     width: 358px;
     height: 50px;
@@ -636,7 +582,7 @@ button {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.form-footer-input::placeholder {
+.form-footer__input::placeholder {
     font-family: roboto;
     font-style: regular;
     font-size: 16px;
@@ -647,7 +593,8 @@ button {
 
     color: rgba(255, 255, 255, 0.6);
 }
-.form-footer button {
+
+.form-footer__button {
     display: inline-flex;
     margin-left: 12px;
     width: 200px;
@@ -667,8 +614,12 @@ button {
 
 }
 
-.subscribe-btn-send .form-icon-send {
-    margin-left:10px;
+.form-footer__button {
+    margin-left:12px;
+}
+
+.form-footer__icon {
+    margin-left: 10px;
 }
 
 
@@ -879,7 +830,9 @@ button {
     margin-top: 20px;
     margin-bottom: 30px;
 }
-
+.subscribe.subscribe-btn-send .form-icon-send {
+    margin-left:10px;
+}
 .icon-license {
     display: inline-block;
     width: 16px;

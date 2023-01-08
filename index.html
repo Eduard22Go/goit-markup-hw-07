@@ -51,24 +51,6 @@
                       </a>
                 </li>
               </ul>
-              <!-- <ul class="address-header list">
-                <li class="address__item">
-                      <a class="address__link link" href="info@devstudio.com">
-                          <svg class="address__icon" width="16" height="12">
-                            <use href="./images/icons.svg#icon-envelope-hover"></use>
-                          </svg>
-                          info@devstudio.com
-                      </a>
-                </li>
-                <li class="address__item">
-                      <a class="address__link link" href="tel.:+380961111111">
-                        <svg class="address__icon" width="12" height="16">
-                          <use href="./images/icons.svg#icon-smartphone"></use>
-                        </svg>
-                        +38 096 111 11 11
-                      </a>
-                </li>
-              </ul> -->
             </address>
         </div>  
     </header>
@@ -273,7 +255,7 @@
                     </li>
                     <li class="team__item"><img src="./images/team-img-4.jpg" alt="Фото Михайло Єрмаков" width="270">
                         <div class="team__card-body">
-                             <h3 class="team__card-name">Михайло Єрмаков</h3>
+                            <h3 class="team__card-name">Михайло Єрмаков</h3>
                             <p lang="en" class="team__card-text">UI Designer</p>
                             <ul class="soc-list list">
                                 <li class="soc-item">
@@ -389,56 +371,58 @@
                 </li>
               </ul>
             </address>  
+          </div>
 
+          <!-- Соцсети футера -->
+          <div class="footer-soc">
+            <h2 class="footer-soc__title">приєднуйтесь</h2>
+            <ul class="soc-list list">
+              <li class="soc-item">
+                <a href="" class="soc-link soc-link--footer link">
+                  <svg class="soc-icon soc-icon--footer" width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram2"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-item">
+                <a href="" class="soc-link soc-link--footer link">
+                  <svg class="soc-icon soc-icon--footer" width="20" height="20">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-item">
+                <a href="" class="soc-link soc-link--footer link">
+                  <svg class="soc-icon soc-icon--footer" width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-item">
+                <a href="" class="soc-link soc-link--footer link">
+                  <svg class="soc-icon soc-icon--footer" width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>                            
           </div>
-              <!-- stop -->
-          <div class="footer-icon">
-            <h2 class="footer-title">приєднуйтесь</h2>
-            <ul class="footer-soc-list list">
-            <li class="footer-soc-item">
-              <a href="" class="footer-soc-link link">
-                <svg class="footer-soc-icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-soc-item">
-              <a href="" class="footer-soc-link link">
-                <svg class="footer-soc-icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-soc-item">
-              <a href="" class="footer-soc-link link">
-                <svg class="footer-soc-icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-soc-item">
-              <a href="" class="footer-soc-link link">
-                <svg class="footer-soc-icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-            </ul>
-          </div>
+
           <!-- Форма подписки в Футере-->
-          
           <form class="form-footer">
-            <p class="footer-title">Підпишіться на розсилку</p>
+            <!-- <label class="form-footer__title" for="form-footer-email"  >Підпишіться на розсилку</label> -->
+            <p class="form-footer__title">Підпишіться на розсилку</p>
             <div>
               <input 
-                class="form-footer-input"
+                class="form-footer__input"
                 type="email" 
-                name="form-footer-email" 
+                name="form-footer-email"
+                id="form-footer-email" 
                 placeholder="E-mail"
               >
-              <button type="submit" class="subscribe-btn-send">
+              <button type="submit" class="form-footer__button">
                 Підписатися
-                <svg class="form-icon-send" width="20" height="20">
+                <svg class="form-footer__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-send"></use>
                 </svg>
               </button>
