@@ -33,6 +33,7 @@ body {
     font-family:'roboto', 'serif', 'verdana','tahoma', sans-serif;
     font-size:14px;
     letter-spacing: 0.03em;
+
 }
 h1,
 h2,
@@ -635,12 +636,18 @@ button {
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
       visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-  
-  .backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0);
+
+.backdrop--is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
+
+/* .backdrop--is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0);
+} */
   
-  .modal {
+.modal {
     position: absolute;
     padding:40px;
     width: 528px;
@@ -655,9 +662,9 @@ button {
   
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .modal-close-btn {
+}
+
+.modal__close-btn {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -669,29 +676,21 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
 
-  .modal-close-btn {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-  }
+}
 
-  .modal-close-btn:hover,
-  .modal-close-btn:focus {
+.modal__close-btn:hover,
+.modal__close-btn:focus {
     fill: var(--header-link-color);
-  }  
+}  
   
-  .is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
-  
-  .no-scroll {
+.no-scroll {
     overflow: hidden;
-  }
+}
   
 /* Оформление формы модального окна */
-.modal-header {
+.modal__header {
     display:flex;
     margin-bottom: 12px;
     justify-content: center;
@@ -710,7 +709,7 @@ button {
     color:var(--headers-color);
 }
 
-.field-label {
+.modal__field-label {
     display: inline-block;
     font-family: roboto;
     font-style: regular;
@@ -725,13 +724,10 @@ button {
     margin: bottom 4px;
 }
 
-.field-input.coment {
+.modal__field-input--coment {
+    display: block;
     padding-top: 12px;
     padding-left: 16px;
-}
-
-.field-input.coment {
-    display: block;
 
     width: 448px;
     height: 120px;
@@ -742,17 +738,28 @@ button {
     font-size: 12px;
     line-height: 1.2;
     letter-spacing: 1%;
+    
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+  
+    color: var(--secondary-text-color);
+    background-color: transparent;
+    outline: transparent;
+
+    cursor: pointer;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
-.modal-inputs {
+.modal__inputs {
     display: block;
 }
 
-.modal-field {
+.modal__field {
     margin-bottom: 10px;
 }
 
-.field-input-icon {
+.modal__input {
     display: flex;
     position: relative;
     justify-items: center;
@@ -761,7 +768,7 @@ button {
     width: 100%;
 }
 
-.field-input-icon  .field-icon {
+.modal__field-icon {
     position: absolute;
     top: 50%;
     left: 12px;
@@ -770,7 +777,7 @@ button {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.field-input {
+.modal__field-input {
     padding-left: 42px;
     padding-top:0px;
     padding-right: 0px;
@@ -790,7 +797,7 @@ button {
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.field-input::placeholder {
+.modal__field-input::placeholder {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.16;
@@ -800,20 +807,20 @@ button {
   }
 
 
-.field-input:focus + .field-icon {
+.modal__field-input:focus + .modal__field-icon {
     fill:var(--header-link-color)   
 }
-.field-input:focus {
+.modal__field-input:focus {
     border: 1px solid var(--header-link-color);
     border-radius: 4px;
 }
 
-.field-input.coment:focus {
+.modal__field-input--coment:focus {
     border: 1px solid var(--header-link-color);
     border-radius: 4px;
 }
 
-.license {
+.modal__license-input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -821,17 +828,17 @@ button {
 
 }
 
-.field-license {
+.modal__field-license {
     display: flex;
     justify-content: center;
     
     margin-top: 20px;
     margin-bottom: 30px;
 }
-.subscribe.subscribe-btn-send .form-icon-send {
-    margin-left:10px;
-}
-.icon-license {
+
+
+
+.modal__license-icon {
     display: inline-block;
     width: 16px;
     height: 15px;
@@ -846,7 +853,7 @@ button {
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.license:checked + .icon-license {
+.modal__license-input:checked + .modal__license-icon {
     background-color: var(--header-link-color);
     background-image: url(../images/icon-check-white.svg);
     background-size: contain;
@@ -854,7 +861,7 @@ button {
     border-color: var(--header-link-color);
 }
 
-.license:not(:checked):focus + .icon-license {
+.modal__license-input:not(:checked):focus + .modal__license-icon {
 
     display: inline-block;
     width: 16px;
@@ -864,7 +871,7 @@ button {
 
 }
 
-.field-label-license {
+.modal__license-label {
     display: flex;
     align-items: center;
 
@@ -879,17 +886,17 @@ button {
     cursor: pointer;
 }
 
-.license-text {
+.modal__license-text {
     display: inline-block;
     margin-left: 8px;
     color:var(--secondary-text-color);
 
 }
 
-.license-link {
+.modal__license-link {
     color:var(--header-link-color)
 }
-.modal-btn-send {
+.modal__btn-send {
     display: block;
     text-align: center;
 
