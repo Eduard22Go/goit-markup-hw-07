@@ -5,6 +5,7 @@ body {
     font-family:'roboto', 'serif', 'verdana','tahoma', sans-serif;
     font-size:14px;
     letter-spacing: 0.03em;
+
 }
 h1,
 h2,
@@ -16,12 +17,24 @@ ul {
     padding:0
 } 
 
-.section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+.link { 
+    text-decoration: none;
 }
+
+
 /* Убирает маркер в списках  */
 .list,
 .feature-list {
     list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
