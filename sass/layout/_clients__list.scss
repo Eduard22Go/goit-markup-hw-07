@@ -24,17 +24,17 @@
     border-radius: 4px;
 
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
- }
-
- .clients__link:hover {
-    border: 1px solid var(--header-link-color);  
-  }
-
-.clients__link:hover .clients__icon,
-.clients__link:focus .clients__icon {
-  fill:var(--header-link-color) 
-}
  
+   &:hover {
+      border: 1px solid var(--header-link-color);  
+   }
+  
+  &:hover .clients__icon,
+  &:focus .clients__icon {
+    fill:var(--header-link-color) 
+   }
+}
+
 .clients__icon {
     fill: var(--icon-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);

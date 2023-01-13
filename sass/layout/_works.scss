@@ -13,8 +13,9 @@
     display: flex;
     position: absolute;
 
-    font-family: "Roboto";
-    font-style: bold;
+    font-family: $font-family-main;
+    // font-style: bold;
+    font-weight: 700;
     font-size: 14px;
     line-height: 1.4;
     letter-spacing: 3%;
