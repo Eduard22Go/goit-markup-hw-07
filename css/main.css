@@ -245,6 +245,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   color: var(--secondary-text-color);
+  fill: var(--secondary-text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
